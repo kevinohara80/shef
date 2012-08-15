@@ -1,0 +1,31 @@
+{
+  "name": "shef",
+  "version": "0.0.0",
+  "description": "A node.js client for your DIRECTV boxes",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kevinohara80/shef.git"
+  },
+  "keywords": [
+    "directv",
+    "shef",
+    "dish",
+    "satellite",
+    "tv",
+    "television",
+    "home",
+    "automation"
+  ],
+  "author": "Kevin O'Hara",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.10.0"
+  },
+  "devDependencies": {
+    "tap": "~0.3.0"
+  }
+}
