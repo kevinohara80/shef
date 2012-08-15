@@ -40,7 +40,20 @@ Box.prototype.getVersion = function(opts, cb) {
   cb();
 }
 
+Box.prototype.getOptions = function(opts, cb) {
+  cb();
+}
 
-module.exports.createBox = function(host, opts) {
+Box.prototype.getMode = function(opts, cb) {
+  cb();
+}
+
+Box.prototype.getLocations = function(opts, cb) {
+  cb();
+}
+
+
+
+module.exports.box = function(host, opts) {
   return new Box(host, opts);
 }
