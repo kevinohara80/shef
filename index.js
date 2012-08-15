@@ -1,10 +1,26 @@
-var request = require('request');
+var request  = require('request');
 var protocol = require('./lib/protocol');
 
 
-var Box = function(host, opts) {
+var Box = function(opts) {
   if(!opts) opts = {};
-  this.host = host;
+
+  if(typeof opts === 'string') {
+    this.host = opts;
+  } else {
+    this.host = opts.host;
+    this.port = opts.port || 8080;
+  }
+
+  if(this.host.indexOf(':') !== -1) {
+    var tokens = this.host.split(':');
+    this.host = tokens[0];
+    this.port = parseInt(tokens[1]);
+  }
+
+  // default to 8080
+  if(!this.port) this.port = 8080;
+
 }
 
 // get tuned information from the box
@@ -52,8 +68,15 @@ Box.prototype.getLocations = function(opts, cb) {
   cb();
 }
 
+// utility request function
+
+Box.prototype._get = function(url, opts, cb) {
+  var base = 'http://' + this.host + ':' + this.port;
+  request.get(base + url, opts, cb);
+}
 
 
-module.exports.box = function(host, opts) {
-  return new Box(host, opts);
+
+module.exports.box = function(opts) {
+  return new Box(opts);
 }
