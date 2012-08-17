@@ -25,12 +25,12 @@ var Box = function(opts) {
 }
 
 // get tuned information from the box
-Box.prototype.getTuned = function(opts, cb) {
-
+Box.prototype.getTuned = function(cb) {
+  this._get('/tv/getTuned', null, cb);
 }
 
 Box.prototype.getProgramInfo = function(chan, cb) {
-  cb();
+  this._get('/tv/getProgInfo', { major: chan }, cb);
 }
 
 Box.prototype.tune = function(chan, cb) {
@@ -38,40 +38,43 @@ Box.prototype.tune = function(chan, cb) {
 }
 
 Box.prototype.key = function(key) {
-  // not sure on this api yet
   var keyRef = {
-    up: function() {
-
-    },
-    down: function() {
-
-    },
-    press: function() {
-
-    }
+    up: function(cb) {
+      this._get('/remote/processKey', { key: key, hold: 'keyUp'}, cb);
+      return this;
+    }.bind(this),
+    down: function(cb) {
+      this._get('/remote/processKey', { key: key, hold: 'keyDown'}, cb);
+      return this;
+    }.bind(this),
+    press: function(cb) {
+      this._get('/remote/processKey', { key: key, hold: 'keyPress'}, cb);
+      return this;
+    }.bind(this)
   }
   return keyRef;
 }
 
-Box.prototype.getVersion = function(opts, cb) {
-  cb();
+Box.prototype.getVersion = function(cb) {
+  this._get('/info/getVersion', null, cb);
 }
 
-Box.prototype.getOptions = function(opts, cb) {
+Box.prototype.getOptions = function(cb) {
   this._get('/info/getOptions', null, cb);
 }
 
 Box.prototype.getMode = function(opts, cb) {
-  cb();
+  this._get('/info/mode', null, cb);
 }
 
-Box.prototype.getLocations = function(opts, cb) {
-  cb();
+Box.prototype.getLocations = function(cb) {
+  this._get('/info/getLocations', null, cb);
 }
 
 // utility request function
 
 Box.prototype._get = function(url, opts, cb) {
+  if(!cb) cb = function() {}
   var base = 'http://' + this.host + ':' + this.port;
   var reqOpts = {};
   if(opts) reqOpts.qs = opts;
@@ -81,8 +84,8 @@ Box.prototype._get = function(url, opts, cb) {
   });
 }
 
-
-
 module.exports.box = function(opts) {
   return new Box(opts);
 }
+
+module.exports.version = '0.0.0';
