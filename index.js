@@ -31,8 +31,9 @@ Box.prototype.getTuned = function(cb) {
 
 Box.prototype.getProgInfo = function(opts, cb) {
   var reqOpts ={};
-  if(typeof opts === 'string') {
-    reqOpts.major == opts;
+  console.log(typeof opts);
+  if(typeof opts === 'string' || typeof opts === 'number') {
+    reqOpts.major = opts;
   } else {
     reqOpts = opts;
   }
@@ -40,7 +41,14 @@ Box.prototype.getProgInfo = function(opts, cb) {
 }
 
 Box.prototype.tune = function(chan, cb) {
-  this._get('/tv/tune', { major: chan }, cb);
+  var reqOpts ={};
+  console.log(typeof opts);
+  if(typeof opts === 'string' || typeof opts === 'number') {
+    reqOpts.major = opts;
+  } else {
+    reqOpts = opts;
+  }
+  this._get('/tv/tune', reqOpts, cb);
 }
 
 Box.prototype.key = function(key) {
@@ -94,4 +102,4 @@ module.exports.box = function(opts) {
   return new Box(opts);
 }
 
-module.exports.version = '0.0.0';
+module.exports.version = '0.0.1';

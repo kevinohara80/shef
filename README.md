@@ -24,9 +24,27 @@ box1.tune(234, function(err, res) {
 
 ## API
 
-### getTuned(callback)
+### shef.box(host) || shef.box(opts)
 
-### getProgInfo(chan|opts, cb)
+### box.getTuned(cb)
+
+### box.getProgInfo(chan, cb) || getProgInfo(opts, cb)
+
+### box.tune(chan, cb) || tune(opts, cb)
+
+### box.key(key_name).up(cb)
+
+### box.key(key_name).down(cb)
+
+### box.key(key_name).press(cb)
+
+### box.getVersion(cb)
+
+### box.getOptions(cb)
+
+### box.getMode(cb)
+
+### box.getLocations(cb)
 
 ## More Info
 
