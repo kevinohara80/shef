@@ -1,5 +1,4 @@
 var shef = require('../');
-
 var box1 = shef.box('192.168.0.114');
 
 

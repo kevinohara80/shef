@@ -29,8 +29,14 @@ Box.prototype.getTuned = function(cb) {
   this._get('/tv/getTuned', null, cb);
 }
 
-Box.prototype.getProgramInfo = function(chan, cb) {
-  this._get('/tv/getProgInfo', { major: chan }, cb);
+Box.prototype.getProgInfo = function(opts, cb) {
+  var reqOpts ={};
+  if(typeof opts === 'string') {
+    reqOpts.major == opts;
+  } else {
+    reqOpts = opts;
+  }
+  this._get('/tv/getProgInfo', reqOpts, cb);
 }
 
 Box.prototype.tune = function(chan, cb) {
@@ -63,7 +69,7 @@ Box.prototype.getOptions = function(cb) {
   this._get('/info/getOptions', null, cb);
 }
 
-Box.prototype.getMode = function(opts, cb) {
+Box.prototype.getMode = function(cb) {
   this._get('/info/mode', null, cb);
 }
 
