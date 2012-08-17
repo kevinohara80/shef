@@ -22,6 +22,13 @@ box1.tune(234, function(err, res) {
 });
 ```
 
+## Box Setup
+
+Your DIRECTV boxes might need a bit of setup. Here are the steps...
+
+1. Go to Menu->System Setup->Whole-Home->External Device`
+2. Set `External Access`, `Current Program`, and `Recordings` to "Allow"
+
 ## API
 
 ### shef.box(host) || shef.box(opts)
