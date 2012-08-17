@@ -1,5 +1,6 @@
 var request  = require('request');
 var protocol = require('./lib/protocol');
+var url      = require('url');
 
 
 var Box = function(opts) {
@@ -25,15 +26,15 @@ var Box = function(opts) {
 
 // get tuned information from the box
 Box.prototype.getTuned = function(opts, cb) {
+
+}
+
+Box.prototype.getProgramInfo = function(chan, cb) {
   cb();
 }
 
-Box.prototype.getProgramInfo = function(opts, cb) {
-  cb();
-}
-
-Box.prototype.tune = function(opts, cb) {
-  cb();
+Box.prototype.tune = function(chan, cb) {
+  this._get('/tv/tune', { major: chan }, cb);
 }
 
 Box.prototype.key = function(key) {
@@ -57,7 +58,7 @@ Box.prototype.getVersion = function(opts, cb) {
 }
 
 Box.prototype.getOptions = function(opts, cb) {
-  cb();
+  this._get('/info/getOptions', null, cb);
 }
 
 Box.prototype.getMode = function(opts, cb) {
@@ -72,7 +73,12 @@ Box.prototype.getLocations = function(opts, cb) {
 
 Box.prototype._get = function(url, opts, cb) {
   var base = 'http://' + this.host + ':' + this.port;
-  request.get(base + url, opts, cb);
+  var reqOpts = {};
+  if(opts) reqOpts.qs = opts;
+  request.get(base + url, reqOpts, function(err, res, body) {
+    if(err) return cb(err, JSON.parse(body));
+    else cb(null, JSON.parse(body));
+  });
 }
 
 
