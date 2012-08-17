@@ -33,25 +33,47 @@ Your DIRECTV boxes might need a bit of setup. Here are the steps...
 
 ### shef.box(host) || shef.box(opts)
 
+Create an instance of a box object to represent one of your DIRECTV boxes
+
 ### box.getTuned(cb)
+
+Return the information about the current tuned channel on the box
 
 ### box.getProgInfo(chan, cb) || getProgInfo(opts, cb)
 
+Get information about a program
+
 ### box.tune(chan, cb) || tune(opts, cb)
+
+Tune your box to a certain channel
 
 ### box.key(key_name).up(cb)
 
+Simulate a `key up` event on the remote
+
 ### box.key(key_name).down(cb)
+
+Simulate a `key down` event on the remote
 
 ### box.key(key_name).press(cb)
 
+Simulate a `key press` event on the remote. This is the equivalent of a key down + key up.
+
 ### box.getVersion(cb)
+
+Get version information about the box
 
 ### box.getOptions(cb)
 
+Get all of the command options for the box
+
 ### box.getMode(cb)
 
+Get the current mode of the box. `0` is standby and `1` is active
+
 ### box.getLocations(cb)
+
+Get an array of the locations for the box
 
 ## More Info
 
