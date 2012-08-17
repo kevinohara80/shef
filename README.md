@@ -1,7 +1,7 @@
 shef
 ====
 
-A node.js client for your DIRECTV boxes.
+A node.js client for your DIRECTV boxes. This is another module to further enable my ability to control my whole house with node.js.
 
 ## Usage
 
