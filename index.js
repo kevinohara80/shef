@@ -31,7 +31,6 @@ Box.prototype.getTuned = function(cb) {
 
 Box.prototype.getProgInfo = function(opts, cb) {
   var reqOpts ={};
-  console.log(typeof opts);
   if(typeof opts === 'string' || typeof opts === 'number') {
     reqOpts.major = opts;
   } else {
@@ -42,7 +41,6 @@ Box.prototype.getProgInfo = function(opts, cb) {
 
 Box.prototype.tune = function(chan, cb) {
   var reqOpts ={};
-  console.log(typeof opts);
   if(typeof opts === 'string' || typeof opts === 'number') {
     reqOpts.major = opts;
   } else {
@@ -102,4 +100,4 @@ module.exports.box = function(opts) {
   return new Box(opts);
 }
 
-module.exports.version = '0.0.1';
+module.exports.version = '0.0.2';

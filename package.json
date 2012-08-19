@@ -1,6 +1,6 @@
 {
   "name": "shef",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A node.js client for your DIRECTV boxes",
   "main": "index.js",
   "scripts": {
