@@ -75,6 +75,52 @@ Get the current mode of the box. `0` is standby and `1` is active
 
 Get an array of the locations for the box
 
+## Supported Keys
+
+* `0`: undefined
+* `1`: undefined
+* `2`: undefined
+* `3`: undefined
+* `4`: undefined
+* `5`: undefined
+* `6`: undefined
+* `7`: undefined
+* `8`: undefined
+* `9`: undefined
+* `power`: undefined
+* `poweron`: undefined
+* `poweroff`: undefined
+* `format`: undefined
+* `pause`: undefined
+* `rew`: undefined
+* `replay`: undefined
+* `stop`: undefined
+* `advance`: undefined
+* `ffwd`: undefined
+* `record`: undefined
+* `play`: undefined
+* `guide`: undefined
+* `active`: undefined
+* `list`: undefined
+* `exit`: undefined
+* `back`: undefined
+* `menu`: undefined
+* `info`: undefined
+* `up`: undefined
+* `down`: undefined
+* `left`: undefined
+* `right`: undefined
+* `select`: undefined
+* `red`: undefined
+* `green`: undefined
+* `yellow`: undefined
+* `blue`: undefined
+* `chanup`: undefined
+* `chandown`: undefined
+* `prev`: undefined
+* `dash`: undefined
+* `enter`: undefined
+
 ## More Info
 
 [SHEF API Guide](http://www.satinstalltraining.com/homeautomation/DTV-MD-0359-DIRECTV_SHEF_Command_Set-V1.3.C.pdf)
