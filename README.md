@@ -77,49 +77,49 @@ Get an array of the locations for the box
 
 ## Supported Keys
 
-* `0`: undefined
-* `1`: undefined
-* `2`: undefined
-* `3`: undefined
-* `4`: undefined
-* `5`: undefined
-* `6`: undefined
-* `7`: undefined
-* `8`: undefined
-* `9`: undefined
-* `power`: undefined
-* `poweron`: undefined
-* `poweroff`: undefined
-* `format`: undefined
-* `pause`: undefined
-* `rew`: undefined
-* `replay`: undefined
-* `stop`: undefined
-* `advance`: undefined
-* `ffwd`: undefined
-* `record`: undefined
-* `play`: undefined
-* `guide`: undefined
-* `active`: undefined
-* `list`: undefined
-* `exit`: undefined
-* `back`: undefined
-* `menu`: undefined
-* `info`: undefined
-* `up`: undefined
-* `down`: undefined
-* `left`: undefined
-* `right`: undefined
-* `select`: undefined
-* `red`: undefined
-* `green`: undefined
-* `yellow`: undefined
-* `blue`: undefined
-* `chanup`: undefined
-* `chandown`: undefined
-* `prev`: undefined
-* `dash`: undefined
-* `enter`: undefined
+* `0`: Zero
+* `1`: One
+* `2`: Two
+* `3`: Three
+* `4`: Four
+* `5`: Five
+* `6`: Six
+* `7`: Seven
+* `8`: Eight
+* `9`: Nine
+* `power`: Power
+* `poweron`: Power On
+* `poweroff`: Power Off
+* `format`: Format
+* `pause`: Pause
+* `rew`: Rewind
+* `replay`: Replay
+* `stop`: Stop
+* `advance`: Advance
+* `ffwd`: Fast Forward
+* `record`: Record
+* `play`: Play
+* `guide`: Guide
+* `active`: Active
+* `list`: List
+* `exit`: Exit
+* `back`: Back
+* `menu`: Menu
+* `info`: Info
+* `up`: Up
+* `down`: Down
+* `left`: Left
+* `right`: Right
+* `select`: Select
+* `red`: Red
+* `green`: Green
+* `yellow`: Yellow
+* `blue`: Blue
+* `chanup`: Channel Up
+* `chandown`: Channel Down
+* `prev`: Previous
+* `dash`: Dash
+* `enter`: Enter
 
 ## More Info
 
