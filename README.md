@@ -77,49 +77,7 @@ Get an array of the locations for the box
 
 ## Supported Keys
 
-* `0`: Zero
-* `1`: One
-* `2`: Two
-* `3`: Three
-* `4`: Four
-* `5`: Five
-* `6`: Six
-* `7`: Seven
-* `8`: Eight
-* `9`: Nine
-* `power`: Power
-* `poweron`: Power On
-* `poweroff`: Power Off
-* `format`: Format
-* `pause`: Pause
-* `rew`: Rewind
-* `replay`: Replay
-* `stop`: Stop
-* `advance`: Advance
-* `ffwd`: Fast Forward
-* `record`: Record
-* `play`: Play
-* `guide`: Guide
-* `active`: Active
-* `list`: List
-* `exit`: Exit
-* `back`: Back
-* `menu`: Menu
-* `info`: Info
-* `up`: Up
-* `down`: Down
-* `left`: Left
-* `right`: Right
-* `select`: Select
-* `red`: Red
-* `green`: Green
-* `yellow`: Yellow
-* `blue`: Blue
-* `chanup`: Channel Up
-* `chandown`: Channel Down
-* `prev`: Previous
-* `dash`: Dash
-* `enter`: Enter
+`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `power`, `poweron`, `poweroff`, `format`, `pause`, `rew`, `replay`, `stop`, `advance`, `ffwd`, `record`, `play`, `guide`, `active`, `list`, `exit`, `back`, `menu`, `info`, `up`, `down`, `left`, `right`, `select`, `red`, `green`, `yellow`, `blue`, `chanup`, `chandown`, `prev`, `dash`, `enter` 
 
 ## More Info
 
